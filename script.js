@@ -1,3 +1,14 @@
+/* ===== Active Page Highlighting ===== */
+(function highlightActiveNav() {
+  const currentPage = window.location.pathname.split('/').pop() || 'index.html';
+  document.querySelectorAll('.site-nav a').forEach(link => {
+    const href = link.getAttribute('href').split('#')[0] || 'index.html';
+    if (currentPage === href) {
+      link.classList.add('is-active');
+    }
+  });
+})();
+
 const header = document.querySelector('[data-header]');
 const nav = document.querySelector('[data-nav]');
 const toggle = document.querySelector('[data-nav-toggle]');

@@ -102,6 +102,30 @@ a {
   color: var(--blue);
 }
 
+.nav-home-link {
+  position: relative;
+}
+
+.nav-home-link::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: var(--blue);
+  transform: scaleX(0);
+  transition: transform 200ms ease;
+}
+
+.nav-home-link:hover::after {
+  transform: scaleX(1);
+}
+
+.nav-home-link.is-active::after {
+  transform: scaleX(1);
+}
+
 .nav-about-btn {
   display: inline-flex;
   align-items: center;
@@ -119,6 +143,11 @@ a {
   background: var(--deep-blue) !important;
   color: #fff !important;
   transform: translateY(-1px);
+}
+
+.nav-about-btn.is-active {
+  background: var(--deep-blue) !important;
+  box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.2);
 }
 
 .nav-toggle {

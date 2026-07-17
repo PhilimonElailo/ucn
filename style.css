@@ -102,6 +102,54 @@ a {
   color: var(--blue);
 }
 
+.nav-home-link {
+  position: relative;
+}
+
+.nav-home-link::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: var(--blue);
+  transform: scaleX(0);
+  transition: transform 200ms ease;
+}
+
+.nav-home-link:hover::after {
+  transform: scaleX(1);
+}
+
+.nav-home-link.is-active::after {
+  transform: scaleX(1);
+}
+
+.nav-about-btn {
+  display: inline-flex;
+  align-items: center;
+  padding: 6px 16px;
+  background: var(--blue);
+  color: #fff !important;
+  border-radius: 6px;
+  font-weight: 700;
+  font-size: 0.9rem;
+  transition: background 180ms ease, transform 120ms ease;
+  letter-spacing: 0.01em;
+}
+
+.nav-about-btn:hover {
+  background: var(--deep-blue) !important;
+  color: #fff !important;
+  transform: translateY(-1px);
+}
+
+.nav-about-btn.is-active {
+  background: var(--deep-blue) !important;
+  box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
 .nav-toggle {
   display: none;
   width: 44px;
@@ -985,8 +1033,62 @@ h3 {
 }
 
 .about-page,
-.volunteer-page {
+.volunteer-page,
+.programs-page,
+.gallery-page,
+.contact-page {
   padding-top: 56px;
+}
+
+/* ===== Page Hero (shared for Programs, Gallery, Contact) ===== */
+.page-hero {
+  position: relative;
+  min-height: 55vh;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  background: var(--ink);
+}
+
+.page-hero picture,
+.page-hero picture img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.page-hero picture img {
+  object-fit: cover;
+  object-position: center;
+}
+
+.page-hero-overlay {
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(90deg, rgba(0, 42, 84, 0.88), rgba(0, 79, 159, 0.52) 54%, rgba(0, 115, 207, 0.2)),
+    linear-gradient(0deg, rgba(0, 42, 84, 0.42), rgba(0, 79, 159, 0));
+}
+
+.page-hero-content {
+  position: relative;
+  z-index: 1;
+  width: min(1180px, calc(100% - 96px));
+  margin: 0 auto;
+  color: var(--white);
+}
+
+.page-hero .eyebrow {
+  color: #ffffff;
+}
+
+.page-hero-lede {
+  max-width: 760px;
+  margin: 0;
+  font-size: clamp(1.06rem, 1.6vw, 1.22rem);
+  line-height: 1.78;
+  color: rgba(255, 255, 255, 0.92);
 }
 
 /* ===== About Hero ===== */

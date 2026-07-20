@@ -20,10 +20,10 @@
       </button>
       <nav class="site-nav" data-nav>
         <a href="index.html">Home</a>
-        <a href="about.html">About Us</a>
-        <a href="programs.html">Programs</a>
-        <a href="gallery.html">Gallery</a>
-        <a href="contact.html">Contact</a>
+        <a class="nav-about-btn" href="about.html">About Us</a>
+        <a href="#programs">Programs</a>
+        <a href="#gallery">Gallery</a>
+        <a href="#contact">Contact</a>
       </nav>
     </header>
 
@@ -38,8 +38,8 @@
           <h1>Union Community Network</h1>
           <p class="hero-lede">UCN is committed to empowering youth from both host and refugee communities by nurturing their talents through the arts. We also support women by providing training on gender-based violence prevention, awareness, and counseling services.</p>
           <div class="hero-actions">
-            <a class="button primary" href="programs.html">Explore Programs</a>
-            <a class="button secondary" href="contact.html">Get Involved</a>
+            <a class="button primary" href="#programs">Explore Programs</a>
+            <a class="button secondary" href="#contact">Get Involved</a>
           </div>
           <div class="hero-highlights" aria-label="Union Community Network focus areas">
             <div>
@@ -62,7 +62,7 @@
         <div class="section-heading">
           <p class="eyebrow">Who We Are</p>
           <h2>Local people building safer, more creative communities.</h2>
-          <a class="button secondary small-link" href="about.html">Read Full About Us</a>
+          <a class="button primary small-link" href="about.html">Read Full About Us</a>
         </div>
         <div class="intro-grid">
           <div>
@@ -92,7 +92,7 @@
             <div>
               <span>01</span>
               <h3>Arts and Talent Development</h3>
-              <p>UCN helps young people identify, practice, and showcase their talents, creating positive pathways for expression, confidence, and leadership.</p>
+              <p>UCN helps young people identify, practice, and showcase their talents, creating positive pathways for expression, confidence, and leadership. Through regular workshops, performances, and mentorship, youth discover their creative potential and build the self-belief needed to pursue meaningful futures.</p>
             </div>
           </article>
           <article class="program-card">
@@ -100,7 +100,7 @@
             <div>
               <span>02</span>
               <h3>GBV Prevention Training</h3>
-              <p>Training sessions strengthen awareness, prevention, and response knowledge so women, youth, and families can better recognize and address gender-based violence.</p>
+              <p>Training sessions strengthen awareness, prevention, and response knowledge so women, youth, and families can better recognize and address gender-based violence. UCN facilitates community dialogues, peer education, and referral pathways that empower survivors and promote collective accountability.</p>
             </div>
           </article>
           <article class="program-card">
@@ -108,7 +108,7 @@
             <div>
               <span>03</span>
               <h3>Counseling and Community Support</h3>
-              <p>UCN provides counseling-centered support and referrals through trusted community relationships, helping people find care close to home.</p>
+              <p>UCN provides counseling-centered support and referrals through trusted community relationships, helping people find care close to home. Our approach integrates psychosocial support, life skills coaching, and peer networks that strengthen emotional well-being and social connection.</p>
             </div>
           </article>
         </div>
@@ -119,15 +119,15 @@
           <div class="impact-copy">
             <p class="eyebrow">Where We Work</p>
             <h2>Kakuma, serving host and refugee communities.</h2>
-            <p class="impact-summary">Union Community Network creates pathways for youth and women through life skills, counseling, vocational growth, digital opportunities, and community-centered partnerships.</p>
+            <p class="impact-summary">Union Community Network creates pathways for youth and women through life skills, counseling, vocational growth, digital opportunities, and community-centered partnerships. UCN delivers targeted programs that empower youth and women across Kakuma and Kalobeyei.</p>
             <div class="impact-cta">
               <div>
                 <strong>Support the next chapter</strong>
                 <span>Help us expand youth programs through donations, partnerships, and mentorship.</span>
               </div>
               <div class="impact-cta-actions">
-                <a class="button primary" href="contact.html">Donate</a>
-                <a class="button secondary light" href="volunteer.html">Volunteer</a>
+                <a class="button primary" href="#contact">Donate</a>
+                <a class="button secondary light" href="#contact">Volunteer</a>
               </div>
             </div>
           </div>
@@ -211,7 +211,10 @@
               </div>
               <h3>Donate</h3>
               <p>Help expand programs in life skills, vocational training, digital skills, GBV prevention, and youth entrepreneurship.</p>
-              <p class="support-note">Secure donation details including our official M-Pesa Till/Paybill and bank account information will be shared transparently with supporters.</p>
+              <div class="donate-till">
+                <img src="assets/images/Till.png" alt="M-Pesa Till Number for Union Community Network donations">
+                <p class="support-note">Use our official M-Pesa Till number to support UCN programs. Bank account details available on request.</p>
+              </div>
             </article>
             <article class="support-card">
               <div class="support-icon">
@@ -219,8 +222,38 @@
               </div>
               <h3>Volunteer & Mentor</h3>
               <p>Share your expertise, mentor young people, facilitate trainings, or participate in community development initiatives.</p>
-              <a class="button primary" href="volunteer.html">Register Interest</a>
             </article>
+          </div>
+          <div class="volunteer-form-wrapper">
+            <h3>Register Interest to Volunteer</h3>
+            <form class="volunteer-form page-form" action="mailto:Classicphilemon@gmail.com" method="post" enctype="text/plain">
+              <label>
+                Full Name
+                <input type="text" name="name" placeholder="Your name">
+              </label>
+              <label>
+                Email Address
+                <input type="email" name="email" placeholder="name@example.com">
+              </label>
+              <label>
+                Phone Number
+                <input type="tel" name="phone" placeholder="0712 345678">
+              </label>
+              <label>
+                Area of Support
+                <select name="support-area">
+                  <option>Mentoring</option>
+                  <option>Volunteering</option>
+                  <option>Facilitating a training</option>
+                  <option>Organizational partnership</option>
+                </select>
+              </label>
+              <label>
+                How would you like to support UCN?
+                <textarea name="message" rows="5" placeholder="Share your expertise, preferred time, or your idea for collaboration."></textarea>
+              </label>
+              <button class="nav-about-btn" type="submit">Submit</button>
+            </form>
           </div>
         </div>
         <div class="contact-panel">
